@@ -88,7 +88,7 @@ chart.minNodeSize = 0.01;
 chart.startAngle = 80;
 chart.endAngle = chart.startAngle + 360;
 chart.sortBy = "fromName";
-chart.fontSize = 15;
+chart.fontSize = 10;
 
 var nodeTemplate = chart.nodes.template;
 nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";

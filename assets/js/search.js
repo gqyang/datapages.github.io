@@ -166,6 +166,8 @@ function initSearch() {
         var input = this.value;
         if (input === '') {
           return;
+        }else {
+          input = '*' + input
         }
   
         var results = index.query(function (query) {

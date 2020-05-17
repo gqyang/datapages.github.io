@@ -61,6 +61,6 @@ series.links.template.tooltipText = "{name}: [bold]{value}[/]";
 series.links.template.interactionsEnabled = true;
 series.minRadius = am4core.percent(0.8);
 series.nodes.template.label.text = "{name}";
-series.nodes.template.label.fontSize = 16;
+series.nodes.template.label.fontSize = 12;
 
 chart.data = data;

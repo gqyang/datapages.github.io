@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://data2api.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://data2api.com/" rel="alternate" type="text/html" /><updated>2020-05-03T08:55:27-05:00</updated><id>https://data2api.com/feed.xml</id><title type="html">Data2API</title><subtitle>A collection of Jupyter Notebooks here.</subtitle><entry><title type="html">城市之间相似的产业群关系图</title><link href="https://data2api.com/viz/2020/05/03/vizchord.html" rel="alternate" type="text/html" title="城市之间相似的产业群关系图" /><published>2020-05-03T00:00:00-05:00</published><updated>2020-05-03T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/03/vizchord</id><content type="html" xml:base="https://data2api.com/viz/2020/05/03/vizchord.html">&lt;style type=&quot;text/css&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://data2api.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://data2api.com/" rel="alternate" type="text/html" /><updated>2020-05-17T09:18:39-05:00</updated><id>https://data2api.com/feed.xml</id><title type="html">Data2API</title><subtitle>A collection of Jupyter Notebooks here.</subtitle><entry><title type="html">菏泽市医用口罩相关企业知识图谱</title><link href="https://data2api.com/viz/2020/05/17/hzkg.html" rel="alternate" type="text/html" title="菏泽市医用口罩相关企业知识图谱" /><published>2020-05-17T00:00:00-05:00</published><updated>2020-05-17T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/17/hzkg</id><content type="html" xml:base="https://data2api.com/viz/2020/05/17/hzkg.html">&lt;style type=&quot;text/css&quot;&gt;
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
+  }
+
+  #chartdiv {
+    width: 100%;
+    max-width: 100%;
+    height:98vh;
+  }
+
+&lt;/style&gt;
+
+&lt;script src=&quot;https://www.amcharts.com/lib/4/core.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://www.amcharts.com/lib/4/charts.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://www.amcharts.com/lib/4/plugins/forceDirected.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://www.amcharts.com/lib/4/themes/animated.js&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;chartdiv&quot;&gt;&lt;/div&gt;
+&lt;!-- partial --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/assets/js/hezekg.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">城市之间相似的产业群关系图</title><link href="https://data2api.com/viz/2020/05/03/vizchord.html" rel="alternate" type="text/html" title="城市之间相似的产业群关系图" /><published>2020-05-03T00:00:00-05:00</published><updated>2020-05-03T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/03/vizchord</id><content type="html" xml:base="https://data2api.com/viz/2020/05/03/vizchord.html">&lt;style type=&quot;text/css&quot;&gt;
   body {
   font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
 }

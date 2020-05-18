@@ -6,6 +6,13 @@
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
+@media screen and (min-width: 800px) {
+    .wrapper {
+        max-width: calc(1280px - (30px * 2));
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
 
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 

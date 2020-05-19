@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://data2api.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://data2api.com/" rel="alternate" type="text/html" /><updated>2020-05-17T20:19:24-05:00</updated><id>https://data2api.com/feed.xml</id><title type="html">Data2API</title><subtitle>A collection of Jupyter Notebooks here.</subtitle><entry><title type="html">菏泽市医用口罩相关企业知识图谱</title><link href="https://data2api.com/viz/2020/05/17/hzkg.html" rel="alternate" type="text/html" title="菏泽市医用口罩相关企业知识图谱" /><published>2020-05-17T00:00:00-05:00</published><updated>2020-05-17T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/17/hzkg</id><content type="html" xml:base="https://data2api.com/viz/2020/05/17/hzkg.html">&lt;style type=&quot;text/css&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://data2api.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://data2api.com/" rel="alternate" type="text/html" /><updated>2020-05-19T05:34:30-05:00</updated><id>https://data2api.com/feed.xml</id><title type="html">Data2API</title><subtitle>A collection of Jupyter Notebooks here.</subtitle><entry><title type="html">菏泽市企业间投资关系图谱</title><link href="https://data2api.com/viz/2020/05/19/hzview.html" rel="alternate" type="text/html" title="菏泽市企业间投资关系图谱" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/19/hzview</id><content type="html" xml:base="https://data2api.com/viz/2020/05/19/hzview.html">&lt;style type=&quot;text/css&quot;&gt;
+  body { margin: 0; }
+&lt;/style&gt;
+
+&lt;script src=&quot;https://unpkg.com/3d-force-graph&quot;&gt;&lt;/script&gt;
+
+&lt;div id=&quot;3d-graph&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  const elem = document.getElementById('3d-graph');
+
+  const Graph = ForceGraph3D()(elem)
+  .jsonUrl(&quot;/assets/js/company.json&quot;)
+  .nodeAutoColorBy('user')
+  .nodeLabel(node =&gt; `${node.description}`)
+  .onNodeHover(node =&gt; elem.style.cursor = node ? 'pointer' : null)
+  .onNodeClick(node =&gt; window.open(`https://bl.ocks.org/${node.user}/${node.id}`, '_blank'));
+&lt;/script&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">菏泽市医用口罩相关企业知识图谱</title><link href="https://data2api.com/viz/2020/05/17/hzkg.html" rel="alternate" type="text/html" title="菏泽市医用口罩相关企业知识图谱" /><published>2020-05-17T00:00:00-05:00</published><updated>2020-05-17T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/17/hzkg</id><content type="html" xml:base="https://data2api.com/viz/2020/05/17/hzkg.html">&lt;style type=&quot;text/css&quot;&gt;
   body {
     font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
   }

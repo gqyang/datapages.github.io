@@ -1,21 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://data2api.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://data2api.com/" rel="alternate" type="text/html" /><updated>2020-05-21T00:54:53-05:00</updated><id>https://data2api.com/feed.xml</id><title type="html">Data2API</title><subtitle>A collection of Jupyter Notebooks here.</subtitle><entry><title type="html">菏泽市企业间投资关系图谱</title><link href="https://data2api.com/viz/2020/05/19/hzview.html" rel="alternate" type="text/html" title="菏泽市企业间投资关系图谱" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/19/hzview</id><content type="html" xml:base="https://data2api.com/viz/2020/05/19/hzview.html">&lt;style type=&quot;text/css&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://data2api.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://data2api.com/" rel="alternate" type="text/html" /><updated>2020-05-21T01:16:07-05:00</updated><id>https://data2api.com/feed.xml</id><title type="html">Data2API</title><subtitle>A collection of Jupyter Notebooks here.</subtitle><entry><title type="html">菏泽市企业间投资关系图谱</title><link href="https://data2api.com/viz/2020/05/19/hzview.html" rel="alternate" type="text/html" title="菏泽市企业间投资关系图谱" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/19/hzview</id><content type="html" xml:base="https://data2api.com/viz/2020/05/19/hzview.html">&lt;style type=&quot;text/css&quot;&gt;
   body { margin: 0; }
 &lt;/style&gt;
 
-&lt;script src=&quot;https://unpkg.com/3d-force-graph&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import { UnrealBloomPass } from 'https://unpkg.com/three/examples/jsm/postprocessing/UnrealBloomPass.js';
 
-&lt;div id=&quot;3d-graph&quot;&gt;&lt;/div&gt;
-
-&lt;script&gt;
   const elem = document.getElementById('3d-graph');
 
+  const distance = 4600;//new add
+
   const Graph = ForceGraph3D()(elem)
-  .jsonUrl(&quot;/assets/js/company.json&quot;)
-  .nodeAutoColorBy('user')
-  .nodeLabel(node =&gt; `${node.description}`)
-  .onNodeHover(node =&gt; elem.style.cursor = node ? 'pointer' : null)
-  .width(1280)
-  .onNodeClick(node =&gt; window.open(`https://bl.ocks.org/${node.user}/${node.id}`, '_blank'));
+    .jsonUrl(&quot;/assets/js/company.json&quot;)
+    .backgroundColor(&quot;#000000&quot;) //new
+    .nodeRelSize(8) //new
+    .nodeOpacity(0.9) //new
+    .linkOpacity(0.5) //new
+    .enableNavigationControls(false)    //new add
+    .showNavInfo(false)                 //new add
+    .cameraPosition({ z: distance })    //new add
+    .nodeAutoColorBy('user')
+    .nodeLabel(node =&gt; `${node.cname}`)
+    .width(1280);
+
+  const bloomPass = new UnrealBloomPass();
+  bloomPass.strength = 3;
+  bloomPass.radius = 1;
+  bloomPass.threshold = 0.1;
+  Graph.postProcessingComposer().addPass(bloomPass);
+
+  // camera orbit
+  //new add
+  let angle = 0;
+  let handle = setInterval(() =&gt; {
+    Graph.cameraPosition({
+      x: distance * Math.sin(angle),
+      //y: 5000,
+      z: distance * Math.cos(angle)
+    });
+    angle += Math.PI / 300;
+
+    if(angle &gt; 5) {
+      clearInterval(handle)
+      Graph.enableNodeDrag(true)              //new add
+      .enableNavigationControls(true)    //new add
+      .showNavInfo(true)                 //new add
+      .cameraPosition({x: 1000, z: 1000 }, Graph.graphData()['nodes'][0], 3000)
+      .linkDirectionalParticleColor(() =&gt; 'red')  //new add
+      .linkDirectionalParticleWidth(4)  //new add
+      .linkHoverPrecision(10); //new add
+      Graph.onLinkClick(Graph.emitParticle);
+    }
+  }, 10);
+
 &lt;/script&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">菏泽市医用口罩相关企业知识图谱</title><link href="https://data2api.com/viz/2020/05/17/hzkg.html" rel="alternate" type="text/html" title="菏泽市医用口罩相关企业知识图谱" /><published>2020-05-17T00:00:00-05:00</published><updated>2020-05-17T00:00:00-05:00</updated><id>https://data2api.com/viz/2020/05/17/hzkg</id><content type="html" xml:base="https://data2api.com/viz/2020/05/17/hzkg.html">&lt;style type=&quot;text/css&quot;&gt;
   body {
     font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;

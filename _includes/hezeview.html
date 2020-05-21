@@ -15,6 +15,7 @@
   .nodeAutoColorBy('user')
   .nodeLabel(node => `${node.description}`)
   .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
+  .width(1280)
   .onNodeClick(node => window.open(`https://bl.ocks.org/${node.user}/${node.id}`, '_blank'));
 </script>
 
